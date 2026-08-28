@@ -40,7 +40,7 @@ export default function Hero() {
           <div className="animate-fade-in-up animation-delay-400 flex items-start gap-2 text-white/70 text-sm sm:text-sm mb-8 sm:mb-10">
             <MapPin size={15} className="text-warm-400 mt-0.5 shrink-0" />
             <span>
-              An der B5, Nr 30Helse, Dithmarschen – Schleswig-Holstein
+              An der B5, Nr 30 in 25709 Helse, Dithmarschen – Schleswig-Holstein
             </span>
           </div>
 
