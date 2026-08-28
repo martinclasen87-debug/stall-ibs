@@ -1,15 +1,22 @@
 import { Heart } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+  const base = import.meta.env.BASE_URL;
+
+  const getAnchorLink = (id: string) => {
+    if (isHome) return `#${id}`;
+    return `${base}#${id}`;
+  };
 
   return (
     <footer className="bg-forest-950 text-white">
-
       {/* ✅ Main Footer (dunkelgrün bleibt komplett erhalten) */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10">
-
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4 sm:mb-5">
@@ -45,13 +52,21 @@ export default function Footer() {
               ].map((link) => (
                 <li key={link.href}>
                   <a
-                    href={link.href}
+                    href={getAnchorLink(link.href.slice(1))}
                     className="text-gray-400 hover:text-warm-400 transition-colors text-sm"
                   >
                     {link.label}
                   </a>
                 </li>
               ))}
+              <li>
+                <Link
+                  to="/impressum"
+                  className="text-gray-400 hover:text-warm-400 transition-colors text-sm"
+                >
+                  Impressum
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -61,16 +76,13 @@ export default function Footer() {
               Leistungen
             </h5>
             <ul className="space-y-2.5">
-              {[
-                "Paddockboxen",
-                "Reithalle",
-                "Koppeln",
-                "Futterversorgung",
-              ].map((s) => (
-                <li key={s} className="text-gray-400 text-sm leading-relaxed">
-                  {s}
-                </li>
-              ))}
+              {["Paddockboxen", "Reithalle", "Koppeln", "Futterversorgung"].map(
+                (s) => (
+                  <li key={s} className="text-gray-400 text-sm leading-relaxed">
+                    {s}
+                  </li>
+                ),
+              )}
             </ul>
           </div>
 
@@ -83,7 +95,6 @@ export default function Footer() {
               <li>Schleswig-Holstein</li>
             </ul>
           </div>
-
         </div>
       </div>
 
@@ -103,8 +114,8 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
             <p className="text-gray-500 text-xs leading-relaxed">
-              © {currentYear} Stall Ibs – Pferdehof in Helse, Dithmarschen.
-              Alle Rechte vorbehalten.
+              © {currentYear} Stall Ibs – Pferdehof in Helse, Dithmarschen. Alle
+              Rechte vorbehalten.
             </p>
             <p className="flex items-center gap-1 text-gray-500 text-xs">
               Mit <Heart size={12} className="text-red-400 fill-red-400" /> für
@@ -113,7 +124,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
     </footer>
   );
 }

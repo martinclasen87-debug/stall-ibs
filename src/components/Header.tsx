@@ -63,7 +63,7 @@ export default function Header() {
                   isScrolled || !isHome ? "text-earth-600" : "text-warm-200"
                 }`}
               >
-                Pferdehof seit 1890
+                Pferdehof seit 1980
               </p>
             </div>
           </Link>

@@ -24,7 +24,7 @@ export default function Hero() {
           <div className="animate-fade-in-up inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/20 rounded-full px-3 py-2 sm:px-4 sm:py-2 mb-6 sm:mb-8">
             <Star size={14} className="text-warm-400 fill-warm-400 shrink-0" />
             <span className="text-white/90 text-sm font-medium">
-              Familienbetrieb seit 1890
+              Familienbetrieb seit 1980
             </span>
           </div>
 
@@ -39,7 +39,9 @@ export default function Hero() {
 
           <div className="animate-fade-in-up animation-delay-400 flex items-start gap-2 text-white/70 text-sm sm:text-sm mb-8 sm:mb-10">
             <MapPin size={15} className="text-warm-400 mt-0.5 shrink-0" />
-            <span>An der B5, Nr 30Helse, Dithmarschen – Schleswig-Holstein</span>
+            <span>
+              An der B5, Nr 30Helse, Dithmarschen – Schleswig-Holstein
+            </span>
           </div>
 
           <div className="animate-fade-in-up animation-delay-600 flex flex-col sm:flex-row gap-3 sm:gap-4">
