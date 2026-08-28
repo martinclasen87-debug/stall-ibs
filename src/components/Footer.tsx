@@ -28,7 +28,7 @@ export default function Footer() {
               <div>
                 <h4 className="font-heading text-lg font-bold">Stall Ibs</h4>
                 <p className="text-forest-400 text-xs uppercase tracking-wider">
-                  Seit 1890
+                  Seit 1980
                 </p>
               </div>
             </div>
@@ -103,7 +103,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           <p className="text-gray-500 text-xs leading-relaxed text-center max-w-4xl mx-auto">
             Stall Ibs – Ihr Pferdehof in Helse, Dithmarschen,
-            Schleswig-Holstein. Familienbetrieb seit 1890 mit moderner
+            Schleswig-Holstein. Familienbetrieb seit 1980 mit moderner
             Pferdehaltung und herzlicher Atmosphäre.
           </p>
         </div>

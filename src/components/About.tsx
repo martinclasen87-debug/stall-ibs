@@ -101,7 +101,7 @@ export default function About() {
 
             <div className="absolute -bottom-4 left-4 sm:-bottom-6 sm:left-6 bg-white rounded-2xl shadow-xl px-4 py-3 sm:p-5 border border-forest-100">
               <div className="text-forest-700 font-heading text-2xl sm:text-3xl font-bold">
-                Seit 1890
+                Seit 1980
               </div>
               <div className="text-gray-500 text-xs sm:text-sm">
                 Tradition & Leidenschaft
